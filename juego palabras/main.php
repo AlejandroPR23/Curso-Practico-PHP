@@ -1,13 +1,17 @@
 <?php
 
 $palabras=["Gato","Cat","Dog","Perro","Sancho","Quijote","Sapo"];
-$palabrasdesordenadas=[];
+
+$form="<form action='analisis.php' method='POST'>";
 
 for ($i=0; $i < count($palabras); $i++) { 
-    $palabrasdesordenadas[$i]=str_shuffle($palabras[$i]);
+   $form.="La palabra es:".str_shuffle($palabras[$i])."<br>". 
+   " <input type='text' placeholder='Ingresa la palabra ordenada' name='palabra$i'>
+     <br>";
 }
 
-print_r($palabrasdesordenadas);
+$button="<button type='submit'>Enviar</button>";
+$formCierre="</form>";
 ?>
 
 <!DOCTYPE html>
@@ -18,15 +22,8 @@ print_r($palabrasdesordenadas);
     <title>Juego palabras</title>
 </head>
 <body>
-    <form action="analisis.php" method="POST">
-        <?php
-        for ($i=0; $i < count($palabras) ; $i++) { 
-           echo " <label for='palabra$i'>Palabra ".$i+1 ."</label>
-                  <input type='text' name='palabra$i'>
-                  <br>";
-        }
-        ?>
-        <button type="submit">Enviar</button>
-    </form>
+    <?php
+    echo $form.$button.$formCierre;
+    ?>
 </body>
 </html>
