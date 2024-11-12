@@ -1,0 +1,18 @@
+4. Estructuras de control disponibles en PHP:
+
+-If Else
+Nos ayuda a validar si una condición se cumple para que una acción se pueda ejecutar, y en caso no se cumpla se realice otra acción.
+
+-While y  do-while
+
+Estas son algunas de las estructuras que tratamos como un ciclo porque se encargan de ejecutar un acción mientras una condición se cumpla.
+
+-for y foreach
+Recorrer arrays
+
+-switch
+Hacer diferentes validaciones en una estructura de control
+
+
+
+
